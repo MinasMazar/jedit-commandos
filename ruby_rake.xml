@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE COMMANDO SYSTEM "commando.dtd">
+
+<COMMANDO>
+  <CAPTION LABEL="Rake Test">
+    <ENTRY LABEL="Test file" VARNAME="source"
+     EVAL="buffer.getPath()" />
+  </CAPTION>
+  <COMMAND CONFIRM="FALSE" SHELL="System">
+    buf = new StringBuffer("bundle exec rake test TEST=");
+    buf.append(source);
+    return buf;
+  </COMMAND>
+</COMMANDO>
