@@ -15,7 +15,8 @@
 
 	<COMMANDS>
 		<COMMAND SHELL="System" DIR="buffer.getDirectory();">
-			buf = new StringBuffer("middleman ");
+			buf = new StringBuffer("bundle exec ");
+			buf.append(" middleman ");
 			if(command == "article") {
 			  if((article_title == null) || (article_title == "") || (article_blog == "")) {
 			    return null;
